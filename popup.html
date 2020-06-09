@@ -1,16 +1,40 @@
 <html>
-    <head>
-        <title>Document</title>
-        <script type="text/javascript" src="popup.js"></script> 
-    </head>
-    <body>
-   
-        <button id="on">ON</button>
-        <button id="off">OFF</button>
-        <!-- <button class="button button1" id="disableButton" style="display:none">Error</button>
-<br id="br1" style="display:none">
-<br id="br2" style="display:none"> -->
-        <textarea id="saveline"></textarea>
-        <input type="button" id="save" value="Save">
-    </body>
+
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="popup.scss" />
+    <script type="text/javascript" src="popup.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="C:\Users\ASUS\Desktop\Chrome-extension-master\jgjh.png" alt="">
+    </header>
+    <!-- <hr> -->
+
+    <div>
+        <br>
+
+        <!-- <button id="on">ON</button>
+    <button id="off">OFF</button> -->
+        <header>
+            <label class="btn-onoff">
+                <header>
+                    Start Tracking Data
+                </header>
+                <input id="onoff" type="checkbox" name="name" data-onoff="toggle"><span></span>
+            </label>
+
+            <br>
+            <br>
+            <form method="post">
+                <input id="saveline" type="text" class="textbox" placeholder="Enter ID">
+            </form>
+
+            <input id="save" title="Save" value="Save" type="button" class="button button4">
+        </header>
+        <!-- <textarea id="saveline"></textarea>
+        <input type="button" id="save" value="Save"> -->
+</body>
+
 </html>
