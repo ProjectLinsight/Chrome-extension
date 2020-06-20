@@ -11,3 +11,7 @@ function (request, sender, sendResponse) {
         sendResponse(isExtensionOn);
     }
 });
+
+// chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+//     alert("url changed");
+// });
