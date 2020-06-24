@@ -1,4 +1,4 @@
-function send_statement(user,link){
+function send_statement(user,title,link){
     // var conf = {  
     //     "endpoint" : "https://watershedlrs.com/api/organizations/11751/lrs/",  
     //     "auth" : "Basic " + toBase64("cdab2239ec6eca:a8c26a00e1507d")  
@@ -27,13 +27,13 @@ function send_statement(user,link){
        },  
        "verb": {  
            "id": "http://example.com/xapi/visited",  
-           "display": {"en-US": "Visited"}  
+           "display": {"en": "Visited"}  
        },  
        "object": {  
            "id": "http://example.com/button_example",  
            "definition": {  
-               "name": {"en-US": link},  
-               "description": {"en-US": link}  
+               "name": {"en": title},  
+               "description": {"en": link}  
            },  
            "objectType": "Activity"  
        }  

@@ -29,9 +29,9 @@ chrome.extension.sendMessage({ cmd: "getOnOffState" }, function (response){
             if (response){
             alert(response);
             console.log(link);
-            send_statement(user,link);
+            send_statement(user,title,link);
             console.log(title);
-            send_statement(user,title);   
+            // send_statement(user,title);   
             window.addEventListener('yt-page-data-updated', function () {
                 console.log('url change');
                 var ylink = window.location.href;
