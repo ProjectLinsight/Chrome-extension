@@ -1,4 +1,4 @@
-var isExtensionOn = true;
+var isExtensionOn = false;
 
 chrome.extension.onMessage.addListener(
 function (request, sender, sendResponse) {

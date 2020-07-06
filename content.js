@@ -8,52 +8,52 @@ var courseSeconds = 0;
 
 var isCourseTimerActive = false;
 
-window.setInterval( () => {
-    if (isCourseTimerActive === true) {
-        courseSeconds += 1;
-        // console.log(courseSeconds);
-        if(courseSeconds == 10 ){
-                console.log(courseSeconds);
-                isCourseTimerActive = false
-                manageTimer.course.stop();
-                chrome.extension.sendMessage({ cmd: "getOnOffState" }, function (response){
-                    // alert(response);
-                    chrome.storage.sync.get(['username'], function(result) {
-                        var user= result.username;
-                        console.log(user);
-                        console.log('Value currently is ' + result.username);
-                            if (response){
-                            alert(response);
-                            console.log(link);
-                            send_statement(user,title,link);
-                            console.log(title);
-                            // send_statement(user,title);   
-                            window.addEventListener('yt-page-data-updated', function () {
-                                console.log('url change');
-                                var ylink = window.location.href;
-                                var ytitle= window.document.title
-                                alert(response);
-                                console.log(ylink);
-                                send_statement(user,ylink);
-                                console.log(ytitle);
-                                send_statement(user,ytitle);
-                            });    
-                            }
-                            else{
-                                alert(response);
-                            }
-                        });
-                });
+// window.setInterval( () => {
+//     if (isCourseTimerActive === true) {
+//         courseSeconds += 1;
+//         // console.log(courseSeconds);
+//         if(courseSeconds == 5 ){
+//                 console.log(courseSeconds);
+//                 isCourseTimerActive = false
+//                 manageTimer.course.stop();
+//                 chrome.extension.sendMessage({ cmd: "getOnOffState" }, function (response){
+//                     // alert(response);
+//                     chrome.storage.sync.get(['username'], function(result) {
+//                         var user= result.username;
+//                         console.log(user);
+//                         console.log('Value currently is ' + result.username);
+//                             if (response){
+//                             alert(response);
+//                             console.log(link);
+//                             send_statement(user,title,link);
+//                             console.log(title);
+//                             // send_statement(user,title);   
+//                             window.addEventListener('yt-page-data-updated', function () {
+//                                 console.log('url change');
+//                                 var ylink = window.location.href;
+//                                 var ytitle= window.document.title
+//                                 alert(response);
+//                                 console.log(ylink);
+//                                 send_statement(user,ylink);
+//                                 console.log(ytitle);
+//                                 send_statement(user,ytitle);
+//                             });    
+//                             }
+//                             else{
+//                                 alert(response);
+//                             }
+//                         });
+//                 });
                 
                 
                 
-                chrome.storage.sync.get(['username'], function(result) {
-                    var user= result.username;
-                    console.log('Value currently is ' + result.username);
-                  });
-            }
-    }
-}, 1000);
+//                 chrome.storage.sync.get(['username'], function(result) {
+//                     var user= result.username;
+//                     console.log('Value currently is ' + result.username);
+//                   });
+//             }
+//     }
+// }, 1000);
 
 const manageTimer = {
     "course": {
@@ -77,34 +77,34 @@ manageTimer.course.start();
 // console.log(title);
 // send_statement(title);
 
-// chrome.extension.sendMessage({ cmd: "getOnOffState" }, function (response){
-//     // alert(response);
-//     chrome.storage.sync.get(['username'], function(result) {
-//         var user= result.username;
-//         console.log(user);
-//         console.log('Value currently is ' + result.username);
-//             if (response){
-//             alert(response);
-//             console.log(link);
-//             send_statement(user,title,link);
-//             console.log(title);
-//             // send_statement(user,title);   
-//             window.addEventListener('yt-page-data-updated', function () {
-//                 console.log('url change');
-//                 var ylink = window.location.href;
-//                 var ytitle= window.document.title
-//                 alert(response);
-//                 console.log(ylink);
-//                 send_statement(user,ylink);
-//                 console.log(ytitle);
-//                 send_statement(user,ytitle);
-//             });    
-//             }
-//             else{
-//                 alert(response);
-//             }
-//         });
-// });
+chrome.extension.sendMessage({ cmd: "getOnOffState" }, function (response){
+    // alert(response);
+    chrome.storage.sync.get(['username'], function(result) {
+        var user= result.username;
+        console.log(user);
+        console.log('Value currently is ' + result.username);
+            if (response){
+            alert(response);
+            console.log(link);
+            send_statement(user,title,link);
+            console.log(title);
+            // send_statement(user,title);   
+            window.addEventListener('yt-page-data-updated', function () {
+                console.log('url change');
+                var ylink = window.location.href;
+                var ytitle= window.document.title
+                alert(response);
+                console.log(ylink);
+                send_statement(user,ytitle,ylink);
+                console.log(ytitle);
+                // send_statement(user,ytitle);
+            });    
+            }
+            else{
+                alert(response);
+            }
+        });
+});
 
 
 
