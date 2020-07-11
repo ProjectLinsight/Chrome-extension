@@ -1,4 +1,4 @@
-var isExtensionOn = true;
+var isExtensionOn = false;
 
 chrome.extension.onMessage.addListener(
 function (request, sender, sendResponse) {
@@ -11,3 +11,7 @@ function (request, sender, sendResponse) {
         sendResponse(isExtensionOn);
     }
 });
+
+// chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+//     alert("url changed");
+// });

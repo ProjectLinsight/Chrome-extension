@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "name": "gagana test",
+    "name": "Linsight",
     "version": "0.1",
     "content_scripts": [
         {

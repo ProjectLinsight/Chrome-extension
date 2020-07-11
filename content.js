@@ -3,8 +3,8 @@ console.log("Chrome extension go");
 var firstHref = $("a[href^='http']").eq(0).attr("href");
 
 console.log(firstHref);
-console.log("hi");
 
+var courseSeconds = 0;
 
 var isCourseTimerActive = false;
 
@@ -63,15 +63,15 @@ const manageTimer = {
     }
 }
 var link = window.location.href;
-var title= window.document.title
+var title= window.document.title;
+manageTimer.course.start();
+
 // window.addEventListener('yt-page-data-updated', function () {
 //     console.log('url change');
 //     var link = window.location.href;
 //     console.log(link);
 
 // });
-
-
 // console.log(link);
 // send_statement(link);
 // console.log(title);
@@ -144,5 +144,4 @@ chrome.storage.sync.get(['username'], function(result) {
     // }; //end statement definition  
 
     // // Dispatch the statement to the LRS  
-    // var result = ADL.XAPIWrapper.sendStatement(statement);  
-    
+    // var result = ADL.XAPIWrapper.sendStatement(statement); 
