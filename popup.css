@@ -1,0 +1,314 @@
+body {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.01em;
+  }
+  .container {
+    position: relative;
+    padding-left: 1.5em;
+    border-radius: .5em;
+    color: #888;
+  }
+  .container > .row {
+    padding: .7em 1.25em .7em 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .container > div span {
+    padding-right: 2em;
+  }
+  .checkbox input {
+    display: none;
+  }
+  .checkbox input:checked + label {
+    background: rgba(79, 187, 228, 0.87);
+  }
+  .checkbox input:checked + label:before {
+    -moz-transform: translateX(1.2em);
+    -webkit-transform: translateX(1.2em);
+    transform: translateX(1.2em);
+  }
+  .checkbox label {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-tap-highlight-color: transparent;
+    width: 2.2em;
+    height: 0.4em;
+    padding: .2em;
+    background: #bcb8b8;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 1em;
+    -webkit-transition: background .1s ease;
+    transition: background .1s ease;
+  }
+  .checkbox label:before {
+    content: '';
+    display: block;
+    width: 1.2em;
+    height: 1.2em;
+    background: #e7e7e7;
+    box-shadow: 3px 5px 20px -3px rgba(0, 0, 0, 0.32);
+    border-radius: 50%;
+    -webkit-transition: -webkit-transform .1s ease;
+    transition: -webkit-transform .1s ease;
+    transition: transform .1s ease;
+    transition: transform .1s ease, -webkit-transform .1s ease;
+  }
+                                  
+
+
+/*Adblock Plus header*/
+
+ :root {
+    --background-color-secondary: #f7f7f7;
+    --background-color-primary: #fff;
+    --border-color-secondary: #d2d2d2;
+    --border-color-primary: #e6e6e6;
+    --border-radius: 4px;
+    --border-radius-primary: 6px;
+    --border-style-primary: solid;
+    --border-width-thick: 4px;
+    --border-width-thin: 1px;
+    --box-shadow-primary: 0 2px 4px 0 hsla(0, 0%, 84%, 0.5);
+    --color-secondary: #000;
+    --color-critical: #ca0000;
+    --color-primary: #585858;
+    --color-link: #0797E1;
+    --color-info: #0797E1;
+    --font-size-big: 17px;
+    --font-size-medium: 16px;
+    --font-size-primary: 13px;
+    --font-size-small: 12px;
+    --margin-primary: 1px;
+    --padding-primary: 1px; }
+  
+  
+  :root {
+    --border-width-thick-doubled: calc(2 * var(--border-width-thick));
+    --border-width-thin-negative: calc(-1 * var(--border-width-thin));
+    --margin-primary-half: calc(var(--margin-primary) / 2); }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box; }
+  
+  [hidden],
+  [aria-hidden="true"] {
+    display: none !important; }
+  
+ 
+  button {
+    border: 0;
+    color: var(--color-link);
+    background: none;
+    cursor: pointer; }
+  
+  button[disabled] {
+    cursor: default; }
+  
+  header,
+  footer {
+    padding: var(--padding-primary); }
+  
+  header,
+  header {
+    align-items: left;
+    justify-content: space-between; }
+  
+  header img {
+    height: 12.5em;
+    width: 17em; 
+    }
+  
+
+/*toggle css*/
+
+
+    /*Start | On-Off Button Design*/
+    .btn-onoff{
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .btn-onoff input{
+      display: block;
+      position: absolute;
+      opacity:0
+    }
+    .btn-onoff span{
+        position: relative;
+        display: block;
+        width: 60px;
+        height: 24px;
+        border-radius: 40px;
+        background: #ccc;
+        border: 1px solid #ccc;
+        -webkit-transition: 400ms;
+        -moz-transition: 400ms;
+        -ms-transition: 400ms;
+        transition: 400ms
+    }
+    .btn-onoff input:checked ~ span{
+      border: 1px solid #4CAF50;
+      background: #4CAF50
+    }
+    .btn-onoff input ~ span:before{
+        content: 'Off';
+        display: block;
+        width: 34px;
+        height: 34px;
+        position: absolute;
+        right: 0px;
+        font-size: 12px;
+        font-family: "Arial";
+        font-weight: bold;
+        line-height: 24px;
+        color: #444;
+        padding: 0px 5px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        -webkit-transition: 500ms;
+        -moz-transition: 500ms;
+        -ms-transition: 500ms;
+        transition: 500ms
+    }
+    .btn-onoff input:checked ~ span:before{
+        content: 'On';
+        right: 20px;
+        color: #fff
+    }
+    .btn-onoff input ~ span:after{
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 4px;
+        left: 4px;
+        background: #fff;
+        border-radius: 50%;
+        -webkit-transition: 400ms;
+        -moz-transition: 400ms;
+        -ms-transition: 400ms;
+        transition: 400ms
+    }
+    .btn-onoff:hover input ~ span:after{
+        -webkit-transform:scale(0.9);
+        -moz-transform:scale(0.9);
+        -ms-transform:scale(0.9);
+        transform:scale(0.9)
+    }
+    .btn-onoff input:checked ~ span:after{
+        content: '';
+        left: 37px;
+    }
+    /*End | On-Off Button Design*/
+
+
+/*form css*/
+
+    body {
+      background: url('Embossment-triangular-blue-background-vector-04.jpg') no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      font-family: 'Roboto', Tahoma, Arial, sans-serif;
+      line-height: 1.5;
+      font-size: 13px;
+    }
+    
+    form {
+      outline: 0;
+      float: right;
+      -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    form > .textbox {
+      outline: 0;
+      height: 32px;
+      width: 154px;
+      line-height: 42px;
+      padding: 0 16px;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: #212121;
+      border: 0;
+      float: left;
+      -webkit-border-radius: 4px 0 0 4px;
+      border-radius: 4px 0 0 4px;
+    }
+    
+    form > .textbox:focus {
+      outline: 0;
+      background-color: #FFF;
+    }
+    
+    form > .button {
+      outline: 0;
+      background: none;
+      background-color: rgba(75, 77, 173, 0.8);
+      float: center;
+      height: 32px;
+      width: 72px;
+      text-align: center;
+      line-height: 42px;
+      border: 0;
+      color: #FFF;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: 16px;
+      text-rendering: auto;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      -webkit-transition: background-color .4s ease;
+      transition: background-color .4s ease;
+      -webkit-border-radius: 0 4px 4px 0;
+      border-radius: 0 4px 4px 0;
+    }
+    
+    form > .button:hover {
+      background-color: rgba(0, 150, 136, 0.8);
+    }
+
+
+
+
+/*save button*/
+    .button {
+      background-color: rgb(76, 102, 175); /* Green */
+      border: none;
+      color: white;
+      padding: 6px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      width: 5em;
+      cursor: pointer;
+    }
+    .button4 {border-radius: 12px;}
