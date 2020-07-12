@@ -145,4 +145,3 @@ chrome.storage.sync.get(['username'], function(result) {
 
     // // Dispatch the statement to the LRS  
     // var result = ADL.XAPIWrapper.sendStatement(statement);  
-    
