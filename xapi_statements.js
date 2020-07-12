@@ -5,9 +5,9 @@ function send_statement(user,title,link){
     //     };  
     
         var conf = {
-            "endpoint" : "http://localhost/traxlrs/public/trax/ws/xapi/",
-            "user" : "56b853c4-24f3-40aa-938f-37076e12e073",
-            "password" : "dca59ca6-473f-4b0b-9250-174d02c64e00",
+            "endpoint" : "http://127.0.0.1:81/traxlrs/public/trax/ws/xapi/",
+            "user" : "testsuite",
+            "password": "password"
           };
 
     ADL.XAPIWrapper.changeConfig(conf);  
